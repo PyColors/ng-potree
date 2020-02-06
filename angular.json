@@ -23,14 +23,33 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "libs/potree/potree.css",
+              "libs/jquery-ui/jquery-ui.min.css",
+              "libs/perfect-scrollbar/css/perfect-scrollbar.css",
+              "libs/openlayers3/ol.css",
+              "libs/spectrum/spectrum.css",
+              "libs/jstree/themes/mixed/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "custom.js",
+              "libs/jquery/jquery-3.1.1.min.js",
+              "libs/spectrum/spectrum.js",
+              "libs/perfect-scrollbar/js/perfect-scrollbar.jquery.js",
+              "libs/jquery-ui/jquery-ui.min.js",
+              "libs/three.js/build/three.min.js",
+              "libs/other/BinaryHeap.js",
+              "libs/tween/tween.min.js",
+              "libs/d3/d3.js",
+              "libs/proj4/proj4.js",
+              "libs/openlayers3/ol.js",
+              "libs/i18next/i18next.js",
+              "libs/jstree/jstree.js",
+              "libs/potree/potree.js",
+              "libs/plasio/js/laslaz.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -88,14 +107,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": ["libs/potree/potree.js"]
           }
         },
         "lint": {
@@ -106,9 +120,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -124,6 +136,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-three-examples"
 }
